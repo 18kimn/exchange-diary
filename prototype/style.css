@@ -1,0 +1,46 @@
+body,
+h2,
+h3,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(250, 0, 90, 0),
+    rgba(250, 0, 100, 0.356)
+  );
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 0.3rem 0;
+}
+.text-center {
+  text-align: center;
+}
+textarea {
+  width: 100%;
+  height: 300px;
+}
+text-l {
+  text-align: left;
+}
+p,
+h2 {
+  color: rgb(66, 66, 66);
+  font-family: "Courier New", Courier, monospace;
+}
+small {
+  color: #ccc;
+}
