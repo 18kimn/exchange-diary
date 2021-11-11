@@ -1,32 +1,25 @@
-import {StatusBar} from 'expo-status-bar'
-import React, { useState } from 'react'
-import {StyleSheet, Text, TextInput, View} from 'react-native'
+import React from 'react'
+
+import {NavigationContainer} from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import {Provider as PaperProvider} from 'react-native-paper'
+import Theme from './styles/Theme'
+import HomeScreen from './screens/Home'
+import WriteScreen from './screens/Write'
+import ReadScreen from './screens/Read'
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
-  const [input, setInput] = useState('test')
   return (
-    <View style={styles.container}>
-      <Text>hi asdfasfasfdasdasd</Text>
-      <Text> this is a jijijijijijij line </Text>
-      <TextInput multiline={true} numberOfLines={20} value={input}
-      onChange = {(text) => setInput(text)}/>
-
-      <View style={styles.header}></View>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider theme={Theme}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
+          <Stack.Screen name="Write" component={WriteScreen}></Stack.Screen>
+          <Stack.Screen name="Read" component={ReadScreen}></Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    height: 50,
-    width: 50,
-    backgroundColor: 'pink'
-  }
-})
