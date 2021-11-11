@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import {StyleSheet, View} from 'react-native'
-import {TextInput} from 'react-native-paper'
+import {StyledTextInput as TextInput} from '../components/Inputs'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: 'flex',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
